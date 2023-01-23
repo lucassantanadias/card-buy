@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+
+  /*sem o vh, o body tem o tamanho da caixa app. Para eu poder deixar o body do tamanho todo da tela, eu coloco o tamnaho de 100vh*/
+  height: 100vh;
+  display: grid; /*para ele jogar a caixa no meio da página*/
+  place-content: center; /*centraliza até as laterais.*/
+}
+
+/*criando variáveis*/
+:root {
+  --bg-color: #d9cdf7;
+  --text-color: #271a45;
+}
+
+/*pego os dois elementos e consigo tirar da tela para começar a organizar.*/
+#btn-close,
+#animated {
+  display: none;
+}
+
+#app {
+  display: flex;
+  align-items: center; /*para alinhar com o centro da caixa.*/
+  gap: 63px;
+}
+
+#product-image {
+  /*preciso colocar o position relative para o botão ficar relativo à caixa.sem isso, ele fica absoluto a toda tela.*/
+  position: relative;
+}
+
+#product-image button {
+  /*position absolute para eu poder mexer no botão.*/
+  position: absolute;
+  /*só consigo usar o right quando estiver usando o position absolute*/
+  right: 0;
+  border: 0px;
+  background-color: transparent;
+}
+
+/*sem o sinal ">" eu estaria pegando toda a tag img, mas eu quero as img que estão fora do elemento "buttom" */
+#product-image > img {
+  width: 449px;
+  height: 222px;
+  object-fit: cover;
+  /*a img cobre toda a caixa, por isso a linha que estava em baixo some.*/
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 100%;
+}
+
+h1 {
+  font-family: "Crimson Pro", serif;
+  font-size: 32px;
+  line-height: 100%;
+  margin-top: 12px;
+}
+
+p {
+  /*font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;*/ /*por padrão, a tag p já recebe esse elementos.*/
+  margin-top: 12px;
+  opacity: 0.67;
+}
+
+#product-details button {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  padding: 8px 16px;
+  border: 0.5px solid var(--text-color);
+  border-radius: 999px;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+/*38:51*/
