@@ -48,6 +48,17 @@ body {
   right: 0;
   border: 0px;
   background-color: transparent;
+  cursor: pointer; /*aparece uma mão quando o mouse está em cima.*/
+}
+
+html.animated button#btn-360,
+html.animated img#static {
+  display: none;
+}
+
+html.animated button#btn-close,
+html.animated img#animated {
+  display: initial;
 }
 
 /*sem o sinal ">" eu estaria pegando toda a tag img, mas eu quero as img que estão fora do elemento "buttom" */
@@ -90,5 +101,3 @@ p {
   background-color: transparent;
   margin-top: 20px;
 }
-
-/*38:51*/
